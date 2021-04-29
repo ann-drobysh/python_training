@@ -7,9 +7,10 @@ class UntitledTestCase(unittest.TestCase):
         self.wd = webdriver.Firefox()
         self.wd.implicitly_wait(30)
 
-    def test_untitled_test_case(self):
-        wd = self.wd
+    def open_main_page(self, wd):
         wd.get("http://localhost/addressbook/")
+
+    def login(self, wd):
         wd.find_element_by_name("user").click()
         wd.find_element_by_name("user").clear()
         wd.find_element_by_name("user").send_keys("admin")
@@ -18,7 +19,11 @@ class UntitledTestCase(unittest.TestCase):
         wd.find_element_by_name("pass").clear()
         wd.find_element_by_name("pass").send_keys("secret")
         wd.find_element_by_xpath("//input[@value='Login']").click()
+
+    def open_add_contact_screen(self, wd):
         wd.find_element_by_link_text("add new").click()
+
+    def add_new_contact(self, wd):
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
         wd.find_element_by_name("firstname").send_keys("Test")
@@ -79,9 +84,30 @@ class UntitledTestCase(unittest.TestCase):
         wd.find_element_by_name("notes").clear()
         wd.find_element_by_name("notes").send_keys("testtesttest note")
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
+
+    def return_to_home_page(self, wd):
         wd.find_element_by_link_text("home").click()
+
+    def logout(self, wd):
         wd.find_element_by_link_text("Logout").click()
-    
+
+    def test_untitled_test_case(self):
+        wd = self.wd
+        self.open_main_page(wd)
+        self.login(wd)
+        self.open_add_contact_screen(wd)
+        self.add_new_contact(wd)
+        self.return_to_home_page(wd)
+        self.logout(wd)
+
+
+
+
+
+
+
+
+
 
 
     def tearDown(self):
