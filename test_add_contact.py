@@ -13,6 +13,7 @@ class TestAddNewContact(unittest.TestCase):
         wd.get("http://localhost/addressbook/")
 
     def login(self, wd, username, password):
+        self.open_main_page(wd)
         wd.find_element_by_name("user").click()
         wd.find_element_by_name("user").clear()
         wd.find_element_by_name("user").send_keys(username)
@@ -26,6 +27,7 @@ class TestAddNewContact(unittest.TestCase):
         wd.find_element_by_link_text("add new").click()
 
     def add_new_contact(self, wd, contact):
+        self.open_add_contact_screen(wd)
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
         wd.find_element_by_name("firstname").send_keys(contact.firstname)
@@ -86,6 +88,7 @@ class TestAddNewContact(unittest.TestCase):
         wd.find_element_by_name("notes").clear()
         wd.find_element_by_name("notes").send_keys(contact.note)
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
+        self.return_to_home_page(wd)
 
     def return_to_home_page(self, wd):
         wd.find_element_by_link_text("home").click()
@@ -95,14 +98,11 @@ class TestAddNewContact(unittest.TestCase):
 
     def test_add_new_contact(self):
         wd = self.wd
-        self.open_main_page(wd)
         self.login(wd, "admin", "secret")
-        self.open_add_contact_screen(wd)
         self.add_new_contact(wd, Contact(firstname="Test", middlename="Midtest", lastname="Lasttest", nickname="Nickname test", title="Mrs", company="Test Company", street="5th Avenue",
                                          home="15", mobilephone="111999333", workphone="12123342", fax="2345645", email="test@test.com", birthday_day="11",
                                          birthday_month="July", birthday_year="1991", anniversary_day="8",
                                          anniversary_month="November", anniversary_year="1991", address2="Sec address", phone2="163434", note="testtesttest note"))
-        self.return_to_home_page(wd)
         self.logout(wd)
 
     def tearDown(self):
