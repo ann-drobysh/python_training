@@ -63,16 +63,16 @@ class TestAddNewContact(unittest.TestCase):
         wd.find_element_by_name("email").clear()
         wd.find_element_by_name("email").send_keys(contact.email)
         wd.find_element_by_name("bday").click()
-        wd.find_element_by_xpath(contact.birthday_day).click()
+        wd.find_element_by_xpath("//option[@value='" + contact.birthday_day + "']").click()
         wd.find_element_by_name("bmonth").click()
-        wd.find_element_by_xpath(contact.birthday_month).click()
+        wd.find_element_by_xpath("//option[@value='" + contact.birthday_month + "']").click()
         wd.find_element_by_name("byear").click()
         wd.find_element_by_name("byear").clear()
         wd.find_element_by_name("byear").send_keys(contact.birthday_year)
         wd.find_element_by_name("aday").click()
-        wd.find_element_by_xpath(contact.anniversary_day).click()
+        wd.find_element_by_xpath("(//option[@value='" + contact.anniversary_day + "'])[2]").click()
         wd.find_element_by_name("amonth").click()
-        wd.find_element_by_xpath(contact.anniversary_month).click()
+        wd.find_element_by_xpath("(//option[@value='" + contact.anniversary_month + "'])[2]").click()
         wd.find_element_by_name("ayear").click()
         wd.find_element_by_name("ayear").clear()
         wd.find_element_by_name("ayear").send_keys(contact.anniversary_year)
@@ -99,9 +99,9 @@ class TestAddNewContact(unittest.TestCase):
         self.login(wd, "admin", "secret")
         self.open_add_contact_screen(wd)
         self.add_new_contact(wd, Contact(firstname="Test", middlename="Midtest", lastname="Lasttest", nickname="Nickname test", title="Mrs", company="Test Company", street="5th Avenue",
-                                         home="15", mobilephone="111999333", workphone="12123342", fax="2345645", email="test@test.com", birthday_day="//option[@value='11']",
-                                         birthday_month="//option[@value='July']", birthday_year="1991", anniversary_day="(//option[@value='8'])[2]",
-                                         anniversary_month="(//option[@value='November'])[2]", anniversary_year="1991", address2="Sec address", phone2="163434", note="testtesttest note"))
+                                         home="15", mobilephone="111999333", workphone="12123342", fax="2345645", email="test@test.com", birthday_day="11",
+                                         birthday_month="July", birthday_year="1991", anniversary_day="8",
+                                         anniversary_month="November", anniversary_year="1991", address2="Sec address", phone2="163434", note="testtesttest note"))
         self.return_to_home_page(wd)
         self.logout(wd)
 
