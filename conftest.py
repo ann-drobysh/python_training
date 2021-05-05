@@ -1,6 +1,7 @@
 import pytest
 from fixture.Application import Application
 
+
 @pytest.fixture
 def app(request):
     fixture = Application()
