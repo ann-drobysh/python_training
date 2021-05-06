@@ -43,6 +43,13 @@ class GroupHelper:
         wd.find_element_by_name("update").click()
         self.return_to_groups_page()
 
+    def delete(self, group):
+        wd = self.app.wd
+        self.open_groups_page()
+        wd.find_element_by_xpath("//input[@type='checkbox'][@title='Select (" + group.gr_title + ")']").click()
+        wd.find_element_by_name("delete").click()
+        self.return_to_groups_page()
+
 
 
 
