@@ -28,6 +28,7 @@ class GroupHelper:
 
     def edit(self, group):
         wd = self.app.wd
+        wd.implicitly_wait(30)
         self.open_groups_page()
         wd.find_element_by_xpath("//input[@type='checkbox'][@title='Select (" + group.gr_title + ")']").click()
         wd.find_element_by_name("edit").click()
@@ -45,6 +46,7 @@ class GroupHelper:
 
     def delete(self, group):
         wd = self.app.wd
+        wd.implicitly_wait(30)
         self.open_groups_page()
         wd.find_element_by_xpath("//input[@type='checkbox'][@title='Select (" + group.gr_title + ")']").click()
         wd.find_element_by_name("delete").click()
