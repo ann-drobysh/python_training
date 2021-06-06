@@ -13,7 +13,7 @@ class Application:
         elif browser == "ie":
             self.wd = webdriver.Ie()
         else:
-            raise ValueError("Unrecognised error %s" % browser)
+            raise ValueError("Unrecognised %s" % browser)
         self.wd.implicitly_wait(5)
         self.session = SessionHelper(self)
         self.group = GroupHelper(self)
