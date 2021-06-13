@@ -3,7 +3,7 @@ import random
 import string
 
 
-constant = [
+testdata = [
     Contact(firstname="firstname1", middlename="middlename1", lastname="lastname1", nickname="nickname1",
             title="title1", company="companyname1", street="street1",
             birthday_day="15", birthday_month="July", birthday_year="1978", anniversary_day="20",
