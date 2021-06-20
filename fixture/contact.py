@@ -149,6 +149,74 @@ class ContactHelper:
         self.open_contact_page()
         self.contacts_cache = None
 
+    def edit_contact_by_id(self, id, contact_to_edit):
+        wd = self.app.wd
+        self.open_contact_page()
+        #wd.find_elements_by_xpath("//img[@alt='Edit']")[index].click()
+        self.open_contact_to_edit_by_id(int(id))
+        wd.find_element_by_name("firstname").click()
+        wd.find_element_by_name("firstname").clear()
+        wd.find_element_by_name("firstname").send_keys(contact_to_edit.firstname)
+        wd.find_element_by_name("middlename").click()
+        wd.find_element_by_name("middlename").clear()
+        wd.find_element_by_name("middlename").send_keys(contact_to_edit.middlename)
+        wd.find_element_by_name("lastname").click()
+        wd.find_element_by_name("lastname").clear()
+        wd.find_element_by_name("lastname").send_keys(contact_to_edit.lastname)
+        wd.find_element_by_name("nickname").click()
+        wd.find_element_by_name("nickname").clear()
+        wd.find_element_by_name("nickname").send_keys(contact_to_edit.nickname)
+        wd.find_element_by_name("title").click()
+        wd.find_element_by_name("title").clear()
+        wd.find_element_by_name("title").send_keys(contact_to_edit.title)
+        wd.find_element_by_name("company").click()
+        wd.find_element_by_name("company").clear()
+        wd.find_element_by_name("company").send_keys(contact_to_edit.company)
+        wd.find_element_by_name("address").click()
+        wd.find_element_by_name("address").clear()
+        wd.find_element_by_name("address").send_keys(contact_to_edit.street)
+        wd.find_element_by_name("home").click()
+        wd.find_element_by_name("home").clear()
+        wd.find_element_by_name("home").send_keys(contact_to_edit.homephone)
+        wd.find_element_by_name("mobile").click()
+        wd.find_element_by_name("mobile").clear()
+        wd.find_element_by_name("mobile").send_keys(contact_to_edit.mobilephone)
+        wd.find_element_by_name("work").click()
+        wd.find_element_by_name("work").clear()
+        wd.find_element_by_name("work").send_keys(contact_to_edit.workphone)
+        wd.find_element_by_name("fax").click()
+        wd.find_element_by_name("fax").clear()
+        wd.find_element_by_name("fax").send_keys(contact_to_edit.fax)
+        wd.find_element_by_name("email").click()
+        wd.find_element_by_name("email").clear()
+        wd.find_element_by_name("email").send_keys(contact_to_edit.email)
+        wd.find_element_by_name("bday").click()
+        wd.find_element_by_xpath("//option[@value='" + contact_to_edit.birthday_day + "']").click()
+        wd.find_element_by_name("bmonth").click()
+        wd.find_element_by_xpath("//option[@value='" + contact_to_edit.birthday_month + "']").click()
+        wd.find_element_by_name("byear").click()
+        wd.find_element_by_name("byear").clear()
+        wd.find_element_by_name("byear").send_keys(contact_to_edit.birthday_year)
+        wd.find_element_by_name("aday").click()
+        wd.find_element_by_xpath("(//option[@value='" + contact_to_edit.anniversary_day + "'])[2]").click()
+        wd.find_element_by_name("amonth").click()
+        wd.find_element_by_xpath("//option[@value='" + contact_to_edit.anniversary_month.lower() + "']").click()
+        wd.find_element_by_name("ayear").click()
+        wd.find_element_by_name("ayear").clear()
+        wd.find_element_by_name("ayear").send_keys(contact_to_edit.anniversary_year)
+        wd.find_element_by_name("address2").click()
+        wd.find_element_by_name("address2").clear()
+        wd.find_element_by_name("address2").send_keys(contact_to_edit.address2)
+        wd.find_element_by_name("phone2").click()
+        wd.find_element_by_name("phone2").clear()
+        wd.find_element_by_name("phone2").send_keys(contact_to_edit.phone2)
+        wd.find_element_by_name("notes").click()
+        wd.find_element_by_name("notes").clear()
+        wd.find_element_by_name("notes").send_keys(contact_to_edit.note)
+        wd.find_element_by_xpath("//input[@name='update']").click()
+        self.open_contact_page()
+        self.contacts_cache = None
+
     def delete_first_contact(self):
         self.delete_contact_by_index(0)
 
@@ -206,6 +274,11 @@ class ContactHelper:
         wd = self.app.wd
         self.open_contact_page()
         wd.find_elements_by_xpath("//img[@alt='Edit']")[index].click()
+
+    def open_contact_to_edit_by_id(self, id):
+        wd = self.app.wd
+        self.open_contact_page()
+        wd.find_element_by_css_selector("a[href='edit.php?id=%s']" % id).click()
 
     def open_contact_to_view_by_index(self, index):
         wd = self.app.wd
