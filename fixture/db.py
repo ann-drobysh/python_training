@@ -28,7 +28,7 @@ class DbFixture:
         try:
             cursor.execute("select id, firstname, middlename, lastname, nickname, company, title, address, home, mobile," +
                            "work, fax, email, email2, email3, bday, bmonth, byear, aday, amonth, ayear," +
-                           "address2, phone2, notes from addressbook")
+                           "address2, phone2, notes from addressbook where deprecated='0000-00-00 00:00:00' ")
             for row in cursor:
                 (id, firstname, middlename, lastname, nickname, company, title, address, home, mobile,
                  work, fax, email, email2, email3, bday, bmonth, byear, aday, amonth, ayear,
