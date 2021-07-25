@@ -313,3 +313,26 @@ class ContactHelper:
         phone2 = re.search("P: (.*)", text).group(1)
         return Contact(homephone=homephone, mobilephone=mobilephone,
                        workphone=workphone, phone2=phone2)
+
+    def add_contact_to_group(self, id, group):
+        wd = self.app.wd
+        self.open_contact_page()
+        wd.find_element_by_css_selector("input[value='%s']" % id).click()
+        wd.find_element_by_css_selector("select[name = 'to_group'] > option[value = '%s']" % group.id).click()
+        wd.find_element_by_xpath("(//input[@value='Add to'])").click()
+        wd.find_element_by_css_selector("div.msgbox")
+        self.open_contact_page()
+        self.contacts_cache = None
+
+    def delete_contact_from_group(self, id, group):
+        wd = self.app.wd
+        self.open_contact_page()
+        wd.find_element_by_css_selector("select[name = 'group'] > option[value = '%s']" % group.id).click()
+        wd.find_element_by_css_selector("input[value='%s']" % id).click()
+        wd.find_element_by_name("remove")
+        wd.find_element_by_name("remove").click()
+        wd.find_element_by_css_selector("div.msgbox")
+        self.open_contact_page()
+        self.contacts_cache = None
+
+
