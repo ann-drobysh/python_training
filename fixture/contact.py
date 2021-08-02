@@ -1,6 +1,7 @@
 from model.contact import Contact
 import re
 import time
+import random
 
 class ContactHelper:
     def __init__(self, app):
@@ -334,5 +335,6 @@ class ContactHelper:
         wd.find_element_by_css_selector("div.msgbox")
         self.open_contact_page()
         self.contacts_cache = None
+
 
 
