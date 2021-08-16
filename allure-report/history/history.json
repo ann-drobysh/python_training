@@ -1,0 +1,232 @@
+{
+  "8296fc081a527fa546737037ae9eaa13" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "aed71af07228e035",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629144432091,
+        "stop" : 1629144439473,
+        "duration" : 7382
+      }
+    } ]
+  },
+  "327a5652c193fb08d889ccc98ee5b017" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "9d708e10dfe6e3ff",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629144457461,
+        "stop" : 1629144458943,
+        "duration" : 1482
+      }
+    } ]
+  },
+  "dbe4bf731f096ead8203bf111dd34c8a" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "ee79cecd1de003d9",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: [name=\"remove\"]",
+      "time" : {
+        "start" : 1629144443508,
+        "stop" : 1629144449174,
+        "duration" : 5666
+      }
+    } ]
+  },
+  "ef84f6e25a176a8cfb8b9a52cfc12052" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "2e94ef4aeb57e4d3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629144460643,
+        "stop" : 1629144462493,
+        "duration" : 1850
+      }
+    } ]
+  },
+  "02183ca50bd1b3953ec89be9741e3431" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "c6069441e10a0950",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629144458997,
+        "stop" : 1629144460598,
+        "duration" : 1601
+      }
+    } ]
+  },
+  "3e808a77f19e2a2eca2401b69f457221" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "741cf6b81cc609d7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629144424329,
+        "stop" : 1629144431968,
+        "duration" : 7639
+      }
+    } ]
+  },
+  "a4df8cb2590e52191dd0ed5906f29ff1" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "a02bb3a6b6835165",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629144450050,
+        "stop" : 1629144457305,
+        "duration" : 7255
+      }
+    } ]
+  },
+  "0a2b5835d5aa7092c8a63f14fced3621" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "13e9e1fa887c8ac7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629144449289,
+        "stop" : 1629144450000,
+        "duration" : 711
+      }
+    } ]
+  },
+  "fa1179cf796a7120005c4c6af50051e8" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "dc80a9f882df7318",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629144442390,
+        "stop" : 1629144443402,
+        "duration" : 1012
+      }
+    } ]
+  },
+  "f5374ae152e4c0d424eb595a41450995" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "1d1b96aa41332fca",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'group'",
+      "time" : {
+        "start" : 1629144441997,
+        "stop" : 1629144442159,
+        "duration" : 162
+      }
+    } ]
+  },
+  "8327372a3b3db264a4ce9a8512994777" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "afdf2d7429b8d64f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629144441271,
+        "stop" : 1629144441892,
+        "duration" : 621
+      }
+    } ]
+  },
+  "38ec08ef9d40e9a5f581571d44033af1" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "2d6e12ae26682729",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629144439729,
+        "stop" : 1629144441142,
+        "duration" : 1413
+      }
+    } ]
+  }
+}

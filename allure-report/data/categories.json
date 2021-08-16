@@ -1,0 +1,43 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "AttributeError: 'NoneType' object has no attribute 'group'",
+      "children" : [ {
+        "name" : "test_phones_on_contact_view_page",
+        "uid" : "1d1b96aa41332fca",
+        "parentUid" : "4275126efd978a824e4c8f2963e9923f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629144441997,
+          "stop" : 1629144442159,
+          "duration" : 162
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "4275126efd978a824e4c8f2963e9923f"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: [name=\"remove\"]",
+      "children" : [ {
+        "name" : "test_delete_contact_from_group",
+        "uid" : "ee79cecd1de003d9",
+        "parentUid" : "8dcf0347c05a54cf1c08bd60feeee3c1",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629144443508,
+          "stop" : 1629144449174,
+          "duration" : 5666
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8dcf0347c05a54cf1c08bd60feeee3c1"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
